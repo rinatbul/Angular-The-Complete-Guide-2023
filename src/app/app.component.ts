@@ -8,8 +8,10 @@ import {Component} from '@angular/core';
     h3 {
       color: forestgreen;
     }
+    h1 {
+      color: red;
+    }
   `]
 })
 export class AppComponent {
-  name = 'Rin';
 }
