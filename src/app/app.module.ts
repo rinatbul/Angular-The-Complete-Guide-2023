@@ -13,9 +13,6 @@ import {WarningButtonComponent} from "./warning-button/warning-button.component"
     AppComponent,
     ServerComponent,
     ServersComponent,
-    WarningAlertComponent,
-    SuccessAlertComponent,
-    WarningButtonComponent,
   ],
   imports: [
     BrowserModule,
