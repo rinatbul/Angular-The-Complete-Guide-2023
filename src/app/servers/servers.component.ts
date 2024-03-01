@@ -12,6 +12,7 @@ import {Component} from '@angular/core';
 export class ServersComponent {
     allowNewServer = false;
     serverCreationStatus = 'No Server Was Created!';
+    serverName = '';
 
     constructor() {
       setTimeout(()=>{
@@ -25,5 +26,9 @@ export class ServersComponent {
 
     onDeleteServer(){
       this.serverCreationStatus = 'Server Was Deleted!'
+    }
+
+    onUpdateServerName(event:Event){
+      this.serverName = (<HTMLInputElement>event.target).value
     }
 }
