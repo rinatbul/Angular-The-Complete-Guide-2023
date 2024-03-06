@@ -14,7 +14,7 @@ export class ServersComponent {
     serverCreationStatus = 'No Server Was Created!';
     serverName = 'TestServer';
     userName = '';
-    isEmptyUserName = true;
+
 
     constructor() {
       setTimeout(()=>{
@@ -35,11 +35,6 @@ export class ServersComponent {
     }
 
     onUserNameEnter(event:Event){
-      this.isEmptyUserName = false
       this.userName = (<HTMLInputElement>event.target).value
-    }
-
-    onResetUserName(){
-      this.userName = ''
     }
 }
