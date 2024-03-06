@@ -5,7 +5,7 @@
 <input type="text"
        class="form-control"
        [(ngModel)]="serverName">
-<p>{{serverName}}</p>
+<!--<p>{{serverName}}</p>-->
 
 <button class="btn btn-primary"
         [disabled]="!allowNewServer"
@@ -14,5 +14,13 @@
 <button (click)="onDeleteServer()">Delete Server</button>
 <!--<p [innerText]="allowNewServer"></p>-->
 <p>{{serverCreationStatus}}</p>
-<app-server></app-server>
-<app-server></app-server>
+<div>
+  <input type="text"
+         [(ngModel)]="userName" (input)="onUserNameEnter($event)">
+  <p>{{userName}}</p>
+  <button [disabled]="isEmptyUserName"
+          class="btn btn-primary" (click)="onResetUserName()">Click</button>
+</div>
+
+<!--<app-server></app-server>-->
+<!--<app-server></app-server>-->

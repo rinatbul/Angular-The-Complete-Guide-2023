@@ -13,6 +13,8 @@ export class ServersComponent {
     allowNewServer = false;
     serverCreationStatus = 'No Server Was Created!';
     serverName = 'TestServer';
+    userName = '';
+    isEmptyUserName = true;
 
     constructor() {
       setTimeout(()=>{
@@ -21,7 +23,7 @@ export class ServersComponent {
     }
 
     onCreateServer(){
-      this.serverCreationStatus = 'Server Was Created!'
+      this.serverCreationStatus = 'Server Was Created! Name is ' + this.serverName
     }
 
     onDeleteServer(){
@@ -30,5 +32,14 @@ export class ServersComponent {
 
     onUpdateServerName(event:Event){
       this.serverName = (<HTMLInputElement>event.target).value
+    }
+
+    onUserNameEnter(event:Event){
+      this.isEmptyUserName = false
+      this.userName = (<HTMLInputElement>event.target).value
+    }
+
+    onResetUserName(){
+      this.userName = ''
     }
 }
