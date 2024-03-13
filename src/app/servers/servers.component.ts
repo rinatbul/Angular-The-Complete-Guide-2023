@@ -10,17 +10,17 @@ import {Component} from '@angular/core';
   styleUrl: './servers.component.css'
 })
 export class ServersComponent {
-    allowNewServer = false;
-    serverCreationStatus = 'No Server Was Created!';
-    serverName = '';
-    userName = ''; // using for Task-2
-    serverCreated = false;
+    allowNewServer : boolean = false;
+    serverCreationStatus : string = 'No Server Was Created!';
+    serverName : string = '';
+    userName: string = ''; // using for Task-2
+    serverCreated: boolean = false;
 
 
     constructor() {
       setTimeout(()=>{
         this.allowNewServer = true;
-      },2000)
+      },2000);
     }
 
     onCreateServer(){
