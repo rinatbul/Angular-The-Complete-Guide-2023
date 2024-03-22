@@ -17,7 +17,8 @@ export class DisplayButtonComponent {
 
   onButtonClick(){
     this.SecretPassword = !this.SecretPassword;
-    this.logArray.push(this.logArray.length + 1)
+    // this.logArray.push(this.logArray.length + 1)
+    this.logArray.push(new Date())
   }
 }
 
