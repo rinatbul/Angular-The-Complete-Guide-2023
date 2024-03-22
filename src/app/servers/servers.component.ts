@@ -15,6 +15,7 @@ export class ServersComponent {
     serverName : string = '';
     userName: string = ''; // using for Task-2
     serverCreated: boolean = false;
+    servers = ['TestServer1', 'TestServer2'];
 
 
     constructor() {
@@ -25,6 +26,7 @@ export class ServersComponent {
 
     onCreateServer(){
       this.serverCreated = true
+      this.servers.push(this.serverName)
       this.serverCreationStatus = 'Server Was Created! Name is ' + this.serverName
     }
 

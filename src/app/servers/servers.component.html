@@ -18,6 +18,7 @@
 
 
 
+
 <!--<div>-->
 <!--  <input type="text"-->
 <!--         [(ngModel)]="userName" (input)="onUserNameEnter($event)">-->
@@ -27,5 +28,4 @@
 <!--          (click)="userName = ''">Click</button>-->
 <!--</div>-->
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>

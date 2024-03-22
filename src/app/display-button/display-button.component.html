@@ -1,0 +1,7 @@
+<button (click)="onButtonClick()">Display Details</button>
+<span *ngIf="SecretPassword">Secret Password = Tuna</span>
+<div *ngFor="let logItem of logArray"
+     [ngStyle]="{backgroundColor: logItem>=5? 'lightBlue':null}"
+     [ngClass]="{white:logItem>=5}">{{logItem}}
+</div>
+
